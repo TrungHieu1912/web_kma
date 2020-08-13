@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container{
+            width: 90%;
+            margin: 0px auto;
+            border: 1px solid black;
+        }
+        .row{
+            display: flex;
+        }
+        .header{
+            margin-bottom: 32px;
+        }
+        .header img{
+            width: 100%;
+            box-shadow: 5px 5px 5px rgb(44, 44, 43);
+        }
+        .body-left{
+            width: 30%;
+            padding: 8px;
+            border-right: 1px solid black;
+        }
+        .body-left-main{
+            border-top: 1px solid black;
+        }
+        .body-right{
+            width: 70%;
+            padding: 8px;
+        }
+        .dangnhap{
+            padding: 8px;
+        }
+        .dangnhap span{
+            width: 30%;
+        }
+        .dangnhap input{
+            width: 70%;
+        }
+        .buton{
+            margin: 16px 32px;
+        }
+        .link-home{
+            margin-left: 8px;
+            
+        }
+        .link-home ul{
+            list-style: none;
+        }
+        .link-home ul li{
+            margin-bottom: 8px;
+        }
+        .link-home ul li a{
+            text-decoration: none;
+            
+        }
+        .body-right img{
+            width: 33.33%;
+            margin-right: 8px;
+            box-shadow: 5px 5px 5px rgb(44, 44, 43);
+        }
+        .footer{
+            margin: 16px 0px;
+            border-top: 1px solid black;
+            padding: 8px;
+            height: 80px;
+            border-bottom: 1px solid black;
+        }
+        .footer-left{
+            width: 30%;
+            border-right: 1px solid black;
+            margin-left: 8px;
+        }
+        .footer-left img{
+            width: 100%;
+        }
+        .footer-right{
+            width: 70%;
+            line-height: 80px;
+        }
+        .body-right h2{
+            color: blue;
+        }
+        h2 > span{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../picture/5.jpg" alt="">
+        </div>
+        <div class="body row">
+            <div class="body-left">
+                <div class="body-left-main">
+                    <div class="dangnhap row">
+                        <span>Username:</span>
+                        <input type="text">
+                    </div>
+                    <div class="dangnhap row">
+                        <span>Password:</span>
+                        <input type="text">
+                    </div>
+                    <div class="buton">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="link-home">
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="help.html">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="body-right">
+                <h2>Welcome to your <span>Photo Site</span></h2>
+                <div class="row">
+                    <img src="../picture/6.jpg" alt="">
+                    <img src="../picture/6.jpg" alt="">
+                    <img src="../picture/6.jpg" alt="">
+                </div>
+                <p>
+                    The form, design, and implementation of CPUs have changed over the course of their history, but their fundamental operation remains almost unchanged. Principal components of a CPU include the arithmetic logic unit (ALU) that performs arithmetic and logic operations, processor registers that supply operands to the ALU and store the results of ALU operations, and a control unit that orchestrates the fetching (from memory) and execution of instructions by directing the coordinated operations of the ALU, registers and other components.
+                </p>
+                <h3>An Introduction to your web site</h3>
+                <p>Most modern CPUs are microprocessors, where the CPU is contained on a single metal-oxide-semiconductor (MOS) integrated circuit (IC) chip. An IC that contains a CPU may also contain memory, peripheral interfaces, and other components of a computer; such integrated devices are variously called microcontrollers or systems on a chip (SoC). Some computers employ a multi-core processor, which is a single chip or "socket" containing two or more CPUs called "cores".[4]</p>
+            </div>
+        </div>
+        <div class="footer row">
+            <div class="footer-left">
+                <img src="../picture/4.jpg" alt="">
+            </div>
+            <div class="footer-right">
+                Copyright &copy; 2003 your company name all right reserved
+            </div>
+        </div>
+    </div>
+</body>
+</html>

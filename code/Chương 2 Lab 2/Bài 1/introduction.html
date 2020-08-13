@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        .container{
+            width: 90%;
+            margin: 0px auto;
+            border: 1px solid black;
+        }
+        .row{
+            display: flex;
+        }
+        .header{
+            margin-bottom: 32px;
+        }
+        .header img{
+            width: 100%;
+            box-shadow: 5px 5px 5px rgb(44, 44, 43);
+        }
+        .body-left{
+            width: 30%;
+            padding: 8px;
+            border-right: 1px solid black;
+        }
+        .body-left-main{
+            border-top: 1px solid black;
+        }
+        .body-right{
+            width: 70%;
+            padding: 8px;
+        }
+        .dangnhap{
+            padding: 8px;
+        }
+        .dangnhap span{
+            width: 30%;
+        }
+        .dangnhap input{
+            width: 70%;
+        }
+        .buton{
+            margin: 16px 32px;
+        }
+        .link-home{
+            margin-left: 8px;
+            
+        }
+        .link-home ul{
+            list-style: none;
+        }
+        .link-home ul li{
+            margin-bottom: 8px;
+        }
+        .link-home ul li a{
+            text-decoration: none;
+            
+        }
+        
+        .footer{
+            margin: 16px 0px;
+            border-top: 1px solid black;
+            padding: 8px;
+            height: 80px;
+            border-bottom: 1px solid black;
+        }
+        .footer-left{
+            width: 30%;
+            border-right: 1px solid black;
+            margin-left: 8px;
+        }
+        .footer-left img{
+            width: 100%;
+        }
+        .footer-right{
+            width: 70%;
+            line-height: 80px;
+        }
+        .body-right h2{
+            color: blue;
+        }
+        h2 > span{
+            color: brown;
+        }
+    </style>
+    <style>
+
+        .main-intrution{
+            width: 80%;
+            margin: 0px auto;
+            text-align: center;
+            background: #808080;
+            color: white;
+        }
+        .main-intrution hr{
+            margin-top: 32px;
+            width: 80%;
+        }
+        .main-intrution img{
+            width: 30%;
+            margin: 32px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../picture/5.jpg" alt="">
+        </div>
+        <div class="body row">
+            <div class="body-left">
+                <div class="body-left-main">
+                    <div class="dangnhap row">
+                        <span>Username:</span>
+                        <input type="text">
+                    </div>
+                    <div class="dangnhap row">
+                        <span>Password:</span>
+                        <input type="text">
+                    </div>
+                    <div class="buton">
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Login">
+                    </div>
+                    <div class="link-home">
+                        <ul>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="introduction.html">Introduction</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="help.html">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="body-right">
+                <h2>Welcome to your <span>Photo Site</span></h2>
+                <div class="main-intrution">
+                    <p>Ảnh và text chuyển động từ trái qua phải</p>
+                    <h2>Wellcome to company</h2>
+                    <hr>
+                    <img src="../picture/tải xuống.jfif" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer row">
+            <div class="footer-left">
+                <img src="../picture/4.jpg" alt="">
+            </div>
+            <div class="footer-right">
+                Copyright &copy; 2003 your company name all right reserved
+            </div>
+        </div>
+    </div>
+</body>
+</html>

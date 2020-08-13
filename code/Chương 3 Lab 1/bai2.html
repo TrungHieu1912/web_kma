@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <script>
+        var anhAr = new Array(5);
+        var currentIndex = 0;
+        function loadAnh() {
+            for (var i = 0; i < anhAr.length; i++) {
+                anhAr[i] = new Image();
+                anhAr[i].src = "images/anh" + i + ".jpg";
+            }
+        }
+        function next() {
+            if (currentIndex < anhAr.length - 1) {
+                document.getElementById("b1").disabled = false;
+                currentIndex++;
+                document.getElementById("hoa").src =
+                    anhAr[currentIndex].src;
+                console.log(currentIndex)
+            }else if(currentIndex== anhAr.length){
+                document.getElementById("b2").disabled = true;
+            } else
+                document.getElementById("b2").disabled = true;
+        }
+        function back() {
+            if (currentIndex > 0) {
+                document.getElementById("b2").disabled = false;
+                currentIndex--;
+                document.getElementById("hoa").src =
+                    anhAr[currentIndex].src;
+            }else if(currentIndex == 0 ){
+                document.getElementById("b1").disabled = true;
+            }
+            else
+                document.getElementById("b1").disabled = true;
+        }
+    </script>
+</head>
+
+<body onload="loadAnh();">
+    <center>
+        <h1> Simple Slideshow </h1>
+        <img id="hoa" src="./images/anh0.jpg" height="300" width="200" /><br />
+        <input type="button" id="b1" value="back" onclick="back();" />
+        <input type="button" id="b2" value="next" onclick="next();" />
+    </center>
+</body>
+
+</html>

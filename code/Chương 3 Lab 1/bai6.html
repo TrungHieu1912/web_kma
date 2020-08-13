@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+<body>
+    <form action="" method="POST" id="form">
+        <table border="1">
+            <tr>
+                <td colspan="2"><b>Register Form</b></td>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" id="name" value=""></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="password" id="password" value=""></td>
+            </tr>
+            <tr>
+                <td>Confirm Password: </td>
+                <td><input type="password" id="cfpassword" value=""></td>
+            </tr>
+            <tr>
+                <td>Contact: </td>
+                <td><textarea name="" id="contact" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td>Age: </td>
+                <td><input type="text" id="age" value=""></td>
+            </tr>
+            <tr>
+                <td>Phone: </td>
+                <td><input type="text" id="phone" value=""></td>
+            </tr>
+            <tr>
+                <td>Mail: </td>
+                <td><input type="text" id="email" value=""></td>
+            </tr>
+            <tr>
+                <td><input type="reset" id="reset" value="Reset" style="float: right;"></td>
+                <td><input type="submit" id="submit" value="Register"></td>
+            </tr>
+        </table>
+    </form>
+    <h3 id="error" style="color: red"></h3>
+    <h3 id="result" style="color: green;"></h3>
+    <script type="text/javascript">
+        var obj_form = document.getElementById('form');
+        obj_form.addEventListener('submit', function(){
+            var error = '';
+            var result = '';
+            var obj_name = document.getElementById('name');
+            var name = obj_name.value;
+            var obj_password = document.getElementById('password');
+            var password = obj_password.value;
+            var obj_cfpassword = document.getElementById('cfpassword');
+            var cfpassword = obj_cfpassword.value;
+            var obj_contact = document.getElementById('contact');
+            var contact = obj_contact.value;
+            var obj_age = document.getElementById('age');
+            var age = obj_age.value;
+            var obj_phone = document.getElementById('phone');
+            var phone= obj_phone.value;
+            var obj_email = document.getElementById('email');
+            var email = obj_email.value;
+
+            var regex_phone = /^\([0-9]{4}\)\-[0-9]{3}\-[0-9]{3}$/
+
+            var regex_email = /^[a-zA-Z0-9_-]{1,}@([a-zA-Z0-9_]{1,}(\.){1})([a-zA-Z0-9\.]{0,})$/
+
+            var check_age = parseInt(age);
+            if(name == ''){
+                error = 'Không được để trống name!!!';
+                obj_name.focus();
+            }
+            else if(password == '' || password != cfpassword){
+                error = 'Password không được để trống hoặc Confirm Pass chưa giống';
+                obj_cfpassword.focus();
+            }
+            else if(age == '' || isNaN(age)){
+                error = 'Không đc để trống age hoặc phải nhập số';
+				obj_age.focus();
+            }
+            else if(check_age < 1 || check_age > 200){
+                error = 'Tuổi chỉ từ 1 - 200';
+				obj_age.focus();
+            }
+            else if(!regex_phone.test(phone)){
+                error = 'Phải nhập đúng định dạng phone';
+				obj_phone.focus();
+            }
+            else if(!regex_email.test(email)){
+                error = 'Phải nhập đúng định dạng email';
+				obj_email.focus();
+            }
+            else{
+                result += "Name: " + name + "<br />";
+                result += "Password: " + password + "<br />";
+                result += "Age: " + age + "<br />";
+                result += "Contact: " + contact + "<br />";                             
+                result += "Email: " + email + "<br />";
+                result += "Phone: " + phone + "<br />";
+                
+            }
+            document.getElementById('error').innerHTML = error;
+            //In ra alert
+            // alert(result);
+            
+            //In tại trang đang làm
+            // document.getElementById('result').innerHTML = result;
+
+            // In qua trang khác
+            var objWindow = window.open();
+		    objWindow.document.write(result);
+
+            //Không load lại trang khi submit
+			event.preventDefault();
+        });
+    </script>
+</body>
+</html>

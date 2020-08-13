@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 90%;
+            margin: 0px auto;
+            border: 1px solid brown;
+        }
+        .row{
+            display: flex;
+        }
+        .header-top{
+            height: 150px;
+            background: blue;
+        }
+        .header-top img{
+            width: 100%;
+        }
+        .header-menu{
+            background: #0088cb;
+            height: 60px;
+
+        }
+        .header-menu ul{
+            list-style-type: none;
+            display: flex;
+            line-height: 60px;
+        }
+        .header-menu ul li{
+            width: 150px;
+            text-align: center;
+            border-right: 1px solid white;
+        }
+        .header-menu ul li:last-child{
+            border: none;
+        }
+        .header-menu ul li:first-child{
+            text-align: left;
+            padding-left: 16px;
+        }
+        .header-menu ul li a{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .header-login{
+            height: 40px;
+            background: #f5f5f5;
+        }
+        .header-login ul{
+            line-height: 40px;
+            list-style-type: none;
+            padding-left: 80%;
+            display: flex; 
+        }
+        .header-login ul li{
+            
+            width: 80px;
+        }
+        .header-login ul li a{
+            text-decoration: none;  
+        }
+
+        .footer{
+            height: 100px;
+            border-top: 1px solid black;
+        }
+        .footer img:first-child{
+            margin-left: 16px;
+        }
+        .footer img{
+            line-height: 100px;
+            margin-right: 64px;
+        }
+        .main-left{
+            
+            width: 25%;
+            border-right: 1px solid black;
+        }
+        .main-left p{
+            
+            height: 40px;
+            line-height: 40px;
+            background:#0089cb;
+            color: white;
+            padding-left: 16px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+        .main-left ul{
+            margin-top: 16px;
+            padding-left: 32px;
+            list-style: square;
+        }
+        .main-left ul li{
+            margin-bottom: 16px;
+        }
+        .main-left ul li a{
+            color: black;
+            text-decoration: none;
+        }
+        .main-center{
+            width: 75%;
+            margin-left: 16px;
+        }
+        
+        
+        .header-bot{
+            background: yellow;
+            height: 100px;
+            border-radius: 0px 0px 10px 10px;
+            margin-bottom: 16px;
+            box-shadow: 0px 5px 5px black;
+            position: relative;
+        }
+        .header-top-s{
+            height: 40px;
+            width: 60%;
+            position: absolute;
+            left: 30px;
+            top: 25px;
+            background: #ffe9a5;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .header-top-s span{
+            margin: 0px 16px;
+            font-weight: bold;
+        }
+        
+        .buton{
+            position: absolute;
+            right: 30%;
+            top: 25px;
+            width: 80px;
+            height: 40px;
+            background: black;
+        }
+        .buton button{
+            width: 80px;
+            height: 40px;
+            background: black;
+            color: white;
+        }
+        
+
+    </style>
+    <style>
+        .main-center-top{
+            background: #f1f1f1;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 16px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .main-center-aa{
+            margin-top: 16px;
+            
+        }
+        .main-center-aaa{
+            width: 60%;
+        }
+        .main-center-aaa .row{
+            margin-bottom: 16px;
+        }
+        .main-center-aaaa{
+            width: 40%;
+        }
+        .left-main{
+            width: 30%;
+        }
+
+        .main-center-aaaa img{
+            width: 60%;
+        }
+        .main-center-bot{
+            margin-top: 32px;
+        }
+        .main-center-bot h3{
+            color: #0088cb;
+            margin-bottom: 8px;
+        }
+        .main-center-bot hr{
+            margin-bottom: 8px;
+        }
+        .main-center-bot p{
+            margin-bottom: 16px;
+            color: brown;
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <img src="./picture/12.jpg" alt="">
+            </div>
+            <div class="header-menu">
+                <ul>
+                    <li><a href="home.html">Trang Chủ</a></li>
+                    <li><a href="create.html">Thêm Công Ty</a></li>
+                    <li><a href="#">Công Ty Mới</a></li>
+                    <li><a href="#">Top Công Ty</a></li>
+                    <li><a href="chitiet.html">Tin Tức</a></li>
+                </ul>
+            </div>
+            <div class="header-login">
+                <ul>
+                    <li><a href="">Đăng Nhập</a></li>
+                    <li><a href="">Đăng Ký</a></li>
+                    <li><a href="">Tài Khoản</a></li>
+                </ul>
+            </div>
+            <div class="header-bot row">
+                <div class="header-top-s">
+                    <input type="text">
+                    <span>Tìm trong ngành nghề</span>
+                    <select name="" id="">
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                        <option value="">--Lựa chọn ngành nghề--</option>
+                    </select>
+                    
+                </div>
+                <div class="buton">
+                    <button>Tìm Kiếm</button>
+                </div>
+            </div>
+        </div>
+        <div class="main row">
+            <div class="main-left">
+                <p>Ngành Nghề</p>
+                <ul>
+                    <li><a href="#">An Ninh - Thám Tử</a></li>
+                    <li><a href="#">Bảo Hiểm</a></li>
+                    <li><a href="#">Bất Động Sản</a></li>
+                    <li><a href="#">Chế Tạo Máy</a></li>
+                    <li><a href="#">Thiết Kế Website</a></li>
+                    <li><a href="#">Chứng Khoán</a></li>
+                    <li><a href="#">Da Giày</a></li>
+                    <li><a href="#">Du Lịch</a></li>
+                    <li><a href="#">Dược Phẩm</a></li>
+                    <li><a href="#">Giải Trí</a></li>
+                </ul>
+            </div>
+
+            <div class="main-center">
+                <div class="main-center-top row">
+                    Văn phòng thám tử TĐL
+                </div>
+                <div class="main-center-aa row">
+                    <div class="main-center-aaa">
+                        <div class="row">
+                            <div class="left-main">Tên Công Ty:</div>
+                            <div class="right-main">Văn phòng thám tử TĐL</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Địa chỉ:</div>
+                            <div class="right-main">159 Phùng Hưng - Hà Đông - Hà Nội</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Email:</div>
+                            <div class="right-main">tranducluong8899@gmail.com</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Số điện thoại:</div>
+                            <div class="right-main">0123456789</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Fax:</div>
+                            <div class="right-main">Faxxxxxxxxxx</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Website:</div>
+                            <div class="right-main">fb/gnoultran.com</div>
+                        </div>
+                        <div class="row">
+                            <div class="left-main">Tỉnh Thành Phố:</div>
+                            <div class="right-main">Hà Nội</div>
+                        </div>
+                    </div>
+                    <div class="main-center-aaaa">
+                        <img src="./picture/13.jpg" alt="">
+                    </div>
+                </div>
+                <div class="main-center-bot">
+                    <h3>Thông tin chi tiết</h3>
+                    <hr>
+                    <p>Văn học theo cách nói chung nhất, là bất kỳ tác phẩm nào bằng văn bản. Hiểu theo nghĩa hẹp hơn, thì văn học là dạng văn bản được coi là một hình thức nghệ thuật, hoặc bất kỳ một bài viết nào được coi là có giá trị nghệ thuật hoặc trí tuệ, thường là do cách thức triển khai ngôn ngữ theo những cách khác với cách sử dụng bình thường. Trong các định nghĩa hiện đại hơn, văn học bao hàm cả các văn bản được nói ra hoặc được hát lên (văn học truyền miệng). Sự phát triển trong công nghệ in ấn đã cho phép phân phối và phát triển các tác phẩm chữ viết, và tạo ra loại văn học điện tử.</p>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+        <div class="footer">
+            <img src="./picture/1.jpg" alt="">
+            <img src="./picture/2.jpg" alt="">
+            <img src="./picture/3.jpg" alt="">
+            <img src="./picture/4.jpg" alt="">
+            <img src="./picture/5.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

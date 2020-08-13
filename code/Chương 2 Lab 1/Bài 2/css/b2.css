@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+.row{
+    display: flex;
+}
+.header{
+    height: 80px;
+}
+.header-left{
+    width: 10%;
+}
+.header-right{
+    width: 90%;
+    margin-top: 20px;
+    padding-left: 8px;
+    height: 40px;
+    background: #e8eefa; 
+    margin-left: 8px;
+    line-height: 40px;   
+}
+.header-right p{
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+.body-left{
+    width: 70%;
+}
+.body-right{
+    width: 30%;
+}
+.form1{
+    border: 2px solid cadetblue;
+    height: 300px;
+    padding: 4px;
+    margin-bottom: 40px;  
+}
+.form1-main{
+    text-align: center;
+    padding-top: 16px;
+    background: #e8eefa;
+    box-sizing: border-box;
+    height: 300px;
+}
+.form2{
+    border: 2px solid cadetblue;
+    height: 150px;
+    padding: 4px;  
+}
+.form2-main{
+    text-align: center;
+    padding-top: 16px;
+    background: #e8eefa;
+    height: 150px;
+    box-sizing: border-box;
+}
+#submit{
+    width: 180px;
+    height: 40px;
+    margin: 24px 0px;
+}
+label{
+    display: inline-block;
+    margin-bottom: 16px;
+    width: 30%;
+}
+input{
+    margin-bottom: 16px;
+    width: 60%;
+}
+.roww{
+    display: flex;
+}
+.check{
+    width: 30%;
+}
+.sub{
+    width: 30%;
+}
+h3{
+    margin: 16px 0px;
+}
+.cici{
+    margin-bottom: 24px;
+}
+.cicici{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.body-left p{
+    margin-bottom: 24px;
+}
+h2{
+    margin: 24px 0px;
+}
+.footer{
+    margin-top: 32px;
+    height: 40px;
+    background: #e8eefa;
+    line-height: 40px;
+    text-align: center;
+}

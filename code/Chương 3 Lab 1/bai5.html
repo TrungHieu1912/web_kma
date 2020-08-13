@@ -1,0 +1,176 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài 5</title>
+	
+    </head>
+    <body>
+
+    <form id="form1">
+        <table border="1">
+            <tr>
+                <td colspan="2"><b>Register Form</b></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input name="name" type="text" id="name" value=""></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input name="password" type="password" id="password" value=""></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input name="cfpassword" type="password" id="cfpassword"></td>
+            </tr>
+            <tr>
+                <td>Address: </td>
+                <td><textarea name="address" rows="3" id="address"></textarea></td>
+            </tr>
+            <tr>
+                <td>Marriage</td>
+                <td><input type="checkbox" name="marriage" id="marriage" value="Đã Kết Hôn"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" id="gendernam" name="gender" value="Nam"> Nam 
+                    <input type="radio" id="gendernu" name="gender" value="Nữ"> Nữ
+                </td>
+            </tr>
+            <tr>
+                <td>Programming languages</td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Skill:</td>
+                <td>
+                    <input type="radio" name="radSkill" id="normal" value="Normal"\>
+                    Normal
+                    <br>
+                    <input type="radio" name="radSkill" id="good" value="Good"\>
+                    Good
+                    <br>
+                    <input type="radio" name="radSkill" id="very_good" value="Very Good"> 
+                    Very good
+                    <br>
+                    <input type="radio" name="radSkill" id="excelent" value="Excelent"> 
+                    Excelent
+                </td>
+            </tr>
+            <tr>
+                <td>Jobs: </td>
+                <td>
+                    <select id="jobs"  multiple>
+                        <option value="1">Công Nghệ Thông Tin
+                        <option value="2">Cơ Khí
+                        <option value="3"> Điện Tử
+                        <option value="4">Kinh Doanh
+                      </select> 
+                </td>
+            </tr>
+            <tr>
+                <td>Hoppies: </td>
+                <td>
+                    <input type="checkbox" id="sports" name="chkHoppies" value="Sports">
+                    Sports
+                    <input type="checkbox" id="music" name="chkHoppies" value="Music">
+                    Music
+                    <input type="checkbox" id="news" name="chkHoppies" value="News">
+                    News
+                    <input type="checkbox" id="sience" name="chkHoppies" value="Sience">
+                    Sience
+                </td>
+            </tr>	
+            <tr>
+                <td><input type="reset" id="reset" value="Reset" ></td>
+                <td><input type="submit" id="submit" value="Register"
+                    >
+                </td>
+            </tr>
+        </table>
+      
+    </form>
+    <div id="error" style="color: red"></div>
+    <div id="result" style="color: green"></div>
+    <script type="text/javascript">
+        var obj_form = document.getElementById('form1');
+        obj_form.addEventListener('submit', function(){
+            var error = '';
+            var result = '';
+            var obj_name = document.getElementById('name');
+            var name = obj_name.value;
+            var obj_password = document.getElementById('password');
+            var password = obj_password.value;
+            var obj_cfpassword = document.getElementById('cfpassword');
+            var cfpassword = obj_cfpassword.value;
+            var obj_address = document.getElementById('address');
+            var address = obj_address.value;
+            var obj_jobs = document.getElementById('jobs');
+            var jobs = obj_jobs.value;
+
+            
+            var gender = document.getElementsByName('gender');
+            
+            var radSkill =document.getElementsByName('radSkill');
+
+            var chkHoppies = document.getElementsByName('chkHoppies');
+
+            if(name == '' || password == '' || cfpassword == '' || address == ''){
+                error = 'Không được để trống các trường!!';
+            }
+            else if(password !=cfpassword){
+                error = 'Password không giống nhau vui lòng nhập lại!!!';
+                obj_cfpassword.focus();
+            }
+            
+            else{
+                result += "Name: " + name + "<br />";
+                result += "Password: " + password + "<br />";
+                result += "Address: " +address+ "<br />";
+                jobs = parseInt(jobs);
+                switch (jobs) {
+                    case 1:
+                        result += "Jobs: Công Nghệ Thông Tin" + "<br />";
+                        break;
+                    case 2:
+                        result += "Jobs: Cơ Khí" + "<br />";
+                        break;
+                    case 3:
+                        result += "Jobs: Điện tử" + "<br />";
+                        break;
+                    case 4: 
+                        result += "Jobs: Kinh doanh" + "<br />";
+                        break;
+                }
+                
+                for (var i = 0; i < gender.length; i++){
+                    if (gender[i].checked === true){
+                        result += "Giới tính: " + gender[i].value + "<br />";
+                    }
+                }
+                for (var j = 0; j < radSkill.length; j++){
+                    if (radSkill[j].checked === true){
+                        result += "Skill: " + radSkill[j].value + "<br />";
+                    }
+                }
+                for (var k = 0; k < chkHoppies.length; k++){
+                    if (chkHoppies[k].checked === true){
+                        result += "Hoppies: " + chkHoppies[k].value + "<br />";
+                    }
+                }
+                
+            }
+            document.getElementById('error').innerHTML = error;
+            var objWindow = window.open();
+		    objWindow.document.write(result);
+            // document.getElementById('result').innerHTML = result;
+                event.preventDefault();
+            
+        })
+    </script>
+    </body>
+ </html>

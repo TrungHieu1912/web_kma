@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bài 4</title>
+	<script language="JavaScript">
+    // Khai báo hàm có tên getFormElements
+	function getFormElements()
+	{
+        // KHai báo ra biến kết quả
+		var strInfor = "";
+		
+		// Lấy ra các trường name, pass...
+		strInfor += "Name: " + document.form1.username.value + "\n" + "Pass: " + document.form1.password.value + "\n"+ "Confirm Password: " + document.form1.cfpassword.value+"\n" + "Address: " + document.form1.address.value;
+
+        // Lấy ra giá trị trường skill
+		strInfor += "\nSkill: ";
+		for (var i = 0; i < document.form1.radSkill.length; i++) 
+		{
+          if (document.form1.radSkill[i].checked == true) 
+		  {
+             strInfor += document.form1.radSkill[i].value;
+          }
+       }
+		
+		strInfor += "\nJobs: ";
+		for (var i = 0; i < document.form1.myList.length; i++) 
+		{
+          if (document.form1.myList.options[i].selected == true) 
+		  {
+             strInfor += document.form1.myList.options[i].value + "\t";
+          }
+       }
+		
+		strInfor += "\nHoppies: ";
+		for (var i = 0; i < document.form1.chkHoppies.length; i++) 
+		{
+          if (document.form1.chkHoppies[i].checked == true) 
+		  {
+             strInfor += document.form1.chkHoppies[i].value + "\t";
+          }
+        }
+		
+		if(document.form1.marriage.checked)
+		{
+			strInfor += "\nMarriage: " + document.form1.marriage.value;
+		}
+		else
+		{
+			strInfor += "\nMarriage: Chưa Kết Hôn";
+		}
+		alert(strInfor);
+		
+		document.write(strInfor);
+		
+ 		var objWindow = window.open();
+		objWindow.document.write(strInfor);	
+	}
+
+    </script>
+    </head>
+    <body>
+
+    <form name="form1">
+    <!-- Form bảng một hàng gồm có hai cột -->
+        <table border="1">
+            <tr>
+                <!-- colspan = 2 gộp hai cột thành một cột  -->
+                <td colspan="2"><b>Register Form</b></td>
+            </tr>
+            <tr>
+                <!-- Thẻ input có  type = text  -->
+                <td>Name:</td>
+                <td><input name="username" type="text" id="username"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input name="password" type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input name="cfpassword" type="password" id="cfpassword"></td>
+            </tr>
+            <tr>
+                <!-- Thẻ textarea để nhập đoạn văn bản có thể xuống dòng -->
+                <td>Address: </td>
+                <td><textarea name="address" rows="3" id="address"></textarea></td>
+            </tr>
+            <tr>
+                <!-- Thẻ input có type = checkbox -->
+                <td>Marriage</td>
+                <td><input type="checkbox" name="marriage" id="marriage" value="Đã Kết Hôn"></td>
+            </tr>
+            <tr>
+                <!-- Thẻ input có type = radio  -->
+                <td>Gender</td>
+                <td><input type="radio" name="gender" value="Nam"> Nam <input type="radio" name="gender" value="Nữ"> Nữ</td>
+            </tr>
+            <tr>
+                <td>Programming languages</td>
+                <td>
+                    
+                </td>
+            </tr>
+            <tr>
+                <td>Skill:</td>
+                <td>
+                    <input type="radio" name="radSkill" value="Nomal"\>
+                    Normal
+                    <br>
+                    <input type="radio" name="radSkill" value="Good"\>
+                    Good
+                    <br>
+                    <input type="radio" name="radSkill" value="Very good"> 
+                    Very good
+                    <br>
+                    <input type="radio" name="radSkill" value="Excelent"> 
+                    Excelent
+                </td>
+            </tr>
+            <tr>
+                <td>Jobs: </td>
+                <td>
+                    <!-- Thẻ select  -->
+                    <select name="myList"  multiple>
+                        <option value="Công Nghệ Thông Tin">Công Nghệ Thông Tin
+                        <option value="Cơ Khí">Cơ Khí
+                        <option value="Điện Tử"> Điện Tử
+                        <option value="Kinh Doanh">Kinh Doanh
+                      </select> 
+                </td>
+            </tr>
+            <tr>
+                <td>Hoppies: </td>
+                <td>
+                    <input type="checkbox" name="chkHoppies" value="Sports">
+                    Sports
+                    <input type="checkbox" name="chkHoppies" value="Music">
+                    Music
+                    <input type="checkbox" name="chkHoppies" value="News">
+                    News
+                    <input type="checkbox" name="chkHoppies" value="Sience">
+                    Sience
+                </td>
+            </tr>	
+            <tr>
+                <td><input type="reset" value="Reset" ></td>
+                <!-- Hàm được gọi khi được click vào nut Register -->
+                <td><input type="button" value="Register"
+                    onClick='getFormElements()'> 
+
+                </td>
+            </tr>
+        </table>
+      
+    </form>
+    </body>
+ </html>

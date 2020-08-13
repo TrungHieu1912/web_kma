@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 60%;
+            margin: 0px auto;
+        }
+        .row{
+            display: flex;
+        }
+        .left{
+            width: 20%;
+            margin-bottom: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        .right{
+            width: 70%;
+            margin-bottom: 16px;
+        }
+        .ten{
+            background: blue;
+            height: 24px;
+            color: white;
+            line-height: 24px;
+            margin-bottom: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        .submit{
+            margin-left: 20%;
+        }
+        .right input{
+            width: 400px;
+        }
+        .gender input{
+            width: 10px;
+        }
+        .gender span{
+            margin-right: 100px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Đăng ký khách hàng</h1>
+        <div class="form">
+            <form action="">
+                <div class="ten">
+                    Thông tin đăng nhập
+                </div>
+                <div class="row">
+                    <div class="left">Tên đăng nhập</div>
+                    <div class="right">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">Mật khẩu</div>
+                    <div class="right">
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">Nhập lại mật khẩu</div>
+                    <div class="right">
+                        <input type="password">
+                    </div>
+                </div>
+                <div class="ten">
+                    Thông tin cá nhân
+                </div>
+                <div class="row">
+                    <div class="left">
+                        Họ tên khách hàng
+                    </div>
+                    <div class="right">
+                        <input type="text">
+                        <span style="color: red;">(*)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        Ngày Sinh
+                    </div>
+                    <div class="right">
+                        <input type="text">
+                        <span style="color: red;">(*)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">
+                        Giới Tính
+                    </div>
+                    <div class="right gender">
+                        <input type="radio" name="gender" value="0"> <span>Nam</span>
+                        <input type="radio" name="gender" value="1"> <Span>Nữ</Span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">Địa chỉ mail</div>
+                    <div class="right">
+                        <input type="text">
+                        <span style="color: red;">(*)</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="left">Thu nhập</div>
+                    <div class="right">
+                        <input type="text">
+                        
+                    </div>
+                </div>
+                <input type="submit" value="Đăng ký" class="submit">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
